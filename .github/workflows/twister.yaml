@@ -113,6 +113,7 @@ jobs:
           if [ -s module_tests.args ]; then
             ../zephyr/scripts/twister +module_tests.args --outdir module_tests ${TWISTER_COMMON} ${PUSH_OPTIONS}
           fi
+          ../zephyr/scripts/twister -T tests -T samples  ${TWISTER_COMMON} ${PUSH_OPTIONS}
 
       - if: github.event_name == 'pull_request'
         name: Run Tests with Twister (Pull Request)
