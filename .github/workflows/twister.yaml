@@ -11,7 +11,7 @@ on:
       - v*-branch
   schedule:
     # Run at 17:00 UTC on every Saturday
-    - cron: '0 17 * * 6'
+    - cron: '0 */3 * * *'
 
 permissions:
   contents: read
